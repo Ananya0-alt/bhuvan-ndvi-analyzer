@@ -1,25 +1,38 @@
-# 🛰️ Bhuvan NDVI Analyzer - ISRO Project
+# 🛰️ Bhuvan NDVI Analyzer - ISRO SAC Project
 
-Live Demo: (Deploy on Streamlit Cloud - Free)
+🚀 **Live App:** https://ananya0-alt-bhuvan-ndvi-analyzer-app-tfmcvc.streamlit.app
+📁 **For ISRO VSSC Internship Application 2026**
 
-**What it does:**
-Analyzes satellite imagery from ISRO Bhuvan / NASA Landsat to map vegetation health using NDVI.
+### Overview
+Developed a satellite image processing tool to calculate NDVI (Normalized Difference Vegetation Index) from ISRO Bhuvan & NASA Landsat data. This replicates vegetation health monitoring work done at ISRO SAC, Ahmedabad.
 
-**Tech:** Python, Rasterio, OpenCV, Streamlit
+**NDVI Formula:** `NDVI = (NIR - Red) / (NIR + Red)`
+- Range -1 to +1
+- Green: Dense vegetation (>0.3)
+- Brown: Barren land / Built-up (0.1 to 0.3)
+- Blue: Water (<0)
 
-**Features:**
-- Upload Landsat TIFF (Band 4 Red + Band 5 NIR)
-- Calculates NDVI = (NIR - Red)/(NIR + Red)
-- Vegetation health map, flood detection, cloud masking
-- Stats: Vegetation %, Barren %, Mean NDVI
+### Data Source Used
+- ISRO Bhuvan: bhuvan.nrsc.gov.in
+- NASA Landsat: earthexplorer.usgs.gov (Band 4=Red, Band 5=NIR)
+- Test Location: Kovalam, Trivandrum (8.3986 N, 76.9746 E) - DOP: 07-01-2025
 
-**How to get data:**
-1. ISRO Bhuvan: bhuvan.nrsc.gov.in -> Download LISS-III data
-2. NASA: earthexplorer.usgs.gov -> Landsat 8/9 -> Bands 4,5
+### Features
+- Upload Bhuvan / Landsat TIFF or JPG/PNG
+- Two modes: Demo Mode (RGB proxy) & Real Mode (Red + NIR bands)
+- Generates NDVI Map + Stats (Mean NDVI, Vegetation %, Barren %)
+- Built with Python, Rasterio, OpenCV, Streamlit
 
-**For ISRO VSSC:**
-This replicates work done at SAC Ahmedabad - Remote Sensing Applications.
+### Results (Kovalam Coast)
+- Mean NDVI: 0.148
+- Vegetation: 6.6%
+- Classification: Sparse Vegetation / Urban - matches coastal settlement reality
 
-**Run locally:**
-pip install -r requirements.txt
-streamlit run app.py
+### Tech Stack
+Python, Rasterio, NumPy, OpenCV, Matplotlib, Streamlit
+
+### Built By
+Ananya - BTech Student, Kochi
+Built for ISRO VSSC Internship
+
+### How to Run Locally
