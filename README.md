@@ -36,3 +36,7 @@ Ananya - BTech Student, Kochi
 Built for ISRO VSSC Internship
 
 ### How to Run Locally
+### Live Result
+![Kovalam NDVI Result](https://... upload your screenshot to GitHub)
+
+Kovalam, Trivandrum (8.3986N, 76.9746E) - Mean NDVI 0.148, Sparse Vegetation/Urban
